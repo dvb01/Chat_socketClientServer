@@ -1,0 +1,71 @@
+object FormPopapNewMessage: TFormPopapNewMessage
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'FormPopapNewMessage'
+  ClientHeight = 63
+  ClientWidth = 362
+  Color = 4337961
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDefault
+  OnClick = FormClick
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object L_Message: TLabel
+    Left = 8
+    Top = 28
+    Width = 337
+    Height = 18
+    Caption = #1053#1086#1074#1086#1077' '#1089#1086#1086#1073#1097#1077#1085#1080#1077
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 15250611
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    OnClick = L_MessageClick
+  end
+  object L_UserName: TLabel
+    Left = 8
+    Top = 4
+    Width = 137
+    Height = 18
+    Caption = #1050#1080#1088#1080#1083#1083' '#1056#1077#1096#1077#1090#1085#1080#1082#1086#1074
+    Color = 4337961
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    OnClick = L_UserNameClick
+  end
+  object L_Close: TLabel
+    AlignWithMargins = True
+    Left = 334
+    Top = 3
+    Width = 18
+    Height = 57
+    Margins.Right = 10
+    Align = alRight
+    Caption = '[X]'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 8421631
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    OnClick = L_CloseClick
+    ExplicitLeft = 329
+    ExplicitTop = -2
+  end
+end

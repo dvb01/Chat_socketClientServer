@@ -1,0 +1,11 @@
+ClipSilver_png RCDATA  "Files\ClipSilver.png"
+ClipWhite_png RCDATA  "Files\ClipWhite.png"
+MicActiv_png RCDATA  "Files\MicActiv.png"
+MicSilver_png RCDATA  "Files\MicSilver.png"
+MicWhite_png RCDATA  "Files\MicWhite.png"
+MicNoActiv_png RCDATA  "Files\MicNoActiv.png"
+Rec_png RCDATA  "Files\Rec.png"
+SendActiv_png RCDATA  "Files\SendActiv.png"
+photo_def_png RCDATA  "Files\photo_def.png"
+Message_wav RCDATA  "Files\Message.wav"
+

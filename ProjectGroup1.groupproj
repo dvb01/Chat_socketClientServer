@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{DF805555-B8A4-4A74-A958-6CC513FC624F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SocketServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SocketClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TestPhotoConver.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SocketServer">
+        <MSBuild Projects="SocketServer.dproj"/>
+    </Target>
+    <Target Name="SocketServer:Clean">
+        <MSBuild Projects="SocketServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SocketServer:Make">
+        <MSBuild Projects="SocketServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SocketClient">
+        <MSBuild Projects="SocketClient.dproj"/>
+    </Target>
+    <Target Name="SocketClient:Clean">
+        <MSBuild Projects="SocketClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SocketClient:Make">
+        <MSBuild Projects="SocketClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TestPhotoConver">
+        <MSBuild Projects="TestPhotoConver.dproj"/>
+    </Target>
+    <Target Name="TestPhotoConver:Clean">
+        <MSBuild Projects="TestPhotoConver.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestPhotoConver:Make">
+        <MSBuild Projects="TestPhotoConver.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SocketServer;SocketClient;TestPhotoConver"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SocketServer:Clean;SocketClient:Clean;TestPhotoConver:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SocketServer:Make;SocketClient:Make;TestPhotoConver:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
